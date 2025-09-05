@@ -19,7 +19,7 @@ public class StudentConfig {
         );
     }
 
-    @Bean
+    @Bean(name = "previousStudents")
     public Students previousStudents() {///beans default name is previousStudents
         return new Students(
             new Student(4L, "Dana"),
