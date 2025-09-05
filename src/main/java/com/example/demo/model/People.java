@@ -4,38 +4,38 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class People<PersonType extends Person> implements Iterable<PersonType> {
-    protected List<PersonType> personList;
+    public List<PersonType> personList;
 
-    protected People(PersonType... people) {
+    public People(PersonType... people) {
         this.personList = new ArrayList<>();
         for (PersonType p : people) {
             this.personList.add(p);
         }
     }
 
-    protected void add(PersonType person) {
+    public void add(PersonType person) {
         personList.add(person);
     }
 
-    protected void remove(PersonType person) {
+    public void remove(PersonType person) {
         personList.remove(person);
     }
 
-    protected int size() {
+    public int size() {
         return personList.size();
     }
 
-    protected void clear() {
+    public void clear() {
         personList.clear();
     }
 
-    protected void addAll(Iterable<PersonType> people) {
+    public void addAll(Iterable<PersonType> people) {
         for (PersonType person : people) {
             personList.add(person);
         }
     }
 
-    protected PersonType findById(long id) {
+    public PersonType findById(long id) {
         PersonType temp = null;
         for (PersonType person : personList) {
             if (person.getId() == id) {
@@ -46,7 +46,7 @@ public abstract class People<PersonType extends Person> implements Iterable<Pers
         return temp;
     }
 
-    protected List<PersonType> findAll() {
+    public List<PersonType> findAll() {
         return personList;
     }
 }
