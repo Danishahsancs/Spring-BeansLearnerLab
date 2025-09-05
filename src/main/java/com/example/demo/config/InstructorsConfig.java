@@ -29,8 +29,8 @@ public class InstructorsConfig {
     @Primary
     public Instructors instructors() {
         return new Instructors(
-            new Instructor(300L, "Lead Instructor A"),
-            new Instructor(301L, "Lead Instructor B")
+            new Instructor(300L, "Kris"),
+            new Instructor(301L, "Paul")
         );
     }
 }
