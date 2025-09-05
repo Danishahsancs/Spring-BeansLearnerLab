@@ -1,8 +1,8 @@
-package test.java.com.example.demo;
+package com.example.demo;
 
-import main.java.com.example.demo.config.StudentConfig;
-import main.java.com.example.demo.model.Student;
-import main.java.com.example.demo.model.Students;
+import com.example.demo.config.StudentConfig;
+import com.example.demo.model.Student;
+import com.example.demo.model.Students;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package main.java.com.example.demo.model;
+package com.example.demo.model;
 
 public class Instructor extends Person implements Teacher {
 
@@ -12,11 +12,18 @@ public class Instructor extends Person implements Teacher {
     }
 
     @Override
-    public void lecture(Iterable<? extends Learner> learners, double numberOfHours) {
-        double numberOfHoursPerPerson = numberOfHours / learners.length;
-
-        for (Learner learner : learners) {
-            learner.learn(numberOfHoursPerPerson);
-        }
+public void lecture(Iterable<? extends Learner> learners, double numberOfHours) {
+    // First pass: count learners
+    int count = 0;
+    for (Learner learner : learners) {
+        count++;
     }
+    
+    double numberOfHoursPerPerson = numberOfHours / count;
+    
+    // Second pass: teach each learner
+    for (Learner learner : learners) {
+        learner.learn(numberOfHoursPerPerson);
+    }
+}
 }
